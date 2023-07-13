@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-if __name__ == "__integer__":
+if __name__ == "__main__":
     """Print 1 + 2."""
     from add_0 import add
 
