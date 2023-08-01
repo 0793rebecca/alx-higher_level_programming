@@ -3,22 +3,15 @@
 
 
 class Square:
-    """Represent a class Square"""
+    """Represent a square."""
 
-    def __init__(self, size):
-        """Instantiation with a new size Square."""
+    def __init__(self, size=0):
+        """Initialize a new Square.
 
-        """size (int): The size of a new Square."""
-        self.__size = size
-
-        def __init__(self, size=0):
-        self.__size = size
-
+            size (int): The size of the new square.
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-
-        if size < 0:
+        elif size < 0:
             raise ValueError("size must be >= 0")
-
-    def area(self):
-        return self.__size ** 2
+        self.__size = size
