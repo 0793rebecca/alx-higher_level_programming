@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""Define a class Rectangle."""
+"""Definea class rectangle."""
 
 
 class Rectangle:
-    """Define a class Rectangle."""
+    """Rectangle class defiation."""
 
-    total number_of_instances = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle instannce in a contructor."""
@@ -14,7 +14,8 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __str__(self):
-        """Returns string representation of rectangle (#)."""
+        """Returns string representation of rectangle (#)
+        """
         if self.__height == 0 or self.__width == 0:
             return ''
         rectangle_str = ''
@@ -25,11 +26,12 @@ class Rectangle:
         return rectangle_str[:-1]
 
     def __repr__(self):
-        """Return internal string representation of a Rectangle instance."""
+        """Return internal string representation of a Rectangle instance
+        """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Trigger when a rectangle is destroyed."""
+        """Trigger when a rectangle is destroyed"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
@@ -62,8 +64,7 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Calculates the area of a Rectangle instance
-        """
+        """Calculates the area of a Rectangle instance."""
         return self.__width * self.__height
 
     def perimeter(self):
